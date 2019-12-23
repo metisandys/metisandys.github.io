@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>搭建 | 分享</title>
+    <meta name="description" content="分享">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.b63842d3.css" as="style"><link rel="preload" href="/assets/js/app.2b932a6f.js" as="script"><link rel="preload" href="/assets/js/2.3a45bbd8.js" as="script"><link rel="preload" href="/assets/js/7.3920d5c1.js" as="script"><link rel="prefetch" href="/assets/js/10.e74cface.js"><link rel="prefetch" href="/assets/js/11.c628705f.js"><link rel="prefetch" href="/assets/js/12.ea832228.js"><link rel="prefetch" href="/assets/js/13.f7f9a0dd.js"><link rel="prefetch" href="/assets/js/14.c82d76c6.js"><link rel="prefetch" href="/assets/js/15.ced8f8fd.js"><link rel="prefetch" href="/assets/js/3.16d88c0a.js"><link rel="prefetch" href="/assets/js/4.19cdc044.js"><link rel="prefetch" href="/assets/js/5.c22c5ecd.js"><link rel="prefetch" href="/assets/js/6.d747d6d3.js"><link rel="prefetch" href="/assets/js/8.0bf4a526.js"><link rel="prefetch" href="/assets/js/9.90cd6cab.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b63842d3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">分享</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/dingzhi.html" class="nav-link">定制</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><a href="/dingzhi.html" class="nav-link">定制</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/dajian/" class="active sidebar-link">搭建</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/dajian/#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/dajian/#初始化" class="sidebar-link">初始化</a></li><li class="sidebar-sub-header"><a href="/dajian/#config-js" class="sidebar-link">config.js</a></li><li class="sidebar-sub-header"><a href="/dajian/#public文件夹" class="sidebar-link">public文件夹</a></li><li class="sidebar-sub-header"><a href="/dajian/#首页" class="sidebar-link">首页</a></li><li class="sidebar-sub-header"><a href="/dajian/#项目结构" class="sidebar-link">项目结构</a></li></ul></li><li><a href="/peizhi/" class="sidebar-link">基本配置</a></li><li><a href="/dingzhi/" class="sidebar-link">定制</a></li><li><a href="/qita/" class="sidebar-link">qita</a></li><li><a href="/fabu/" class="sidebar-link">部署</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="搭建"><a href="#搭建" class="header-anchor">#</a> 搭建</h1> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language- extra-class"><pre class="language-text"><code>yarn global add vuepress # 或者：npm install -g vuepress
+</code></pre></div><h2 id="初始化"><a href="#初始化" class="header-anchor">#</a> 初始化</h2> <p>创建一个package.json文件</p> <div class="language- extra-class"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;vuepress-share&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;scripts&quot;: {
+    &quot;docs:dev&quot;: &quot;vuepress dev docs&quot;,
+    &quot;docs:build&quot;: &quot;vuepress build docs&quot;
+  }
+}
+</code></pre></div><h2 id="config-js"><a href="#config-js" class="header-anchor">#</a> config.js</h2> <p>config.js是VuePress必要的配置文件，它导出一个javascript对象。</p> <h2 id="public文件夹"><a href="#public文件夹" class="header-anchor">#</a> public文件夹</h2> <p>这个文件夹是用来放置静态资源的，打包出来之后会放在.vuepress/dist/的根目录。</p> <h2 id="首页"><a href="#首页" class="header-anchor">#</a> 首页</h2> <p>(像VuePress文档主页一样)
+在docs文件夹下面创建一个README.md：
+默认的主题提供了一个首页, 如下配置即可：</p> <div class="language- extra-class"><pre class="language-text"><code>---
+home: true
+# heroImage: /logo.jpg
+actionText: 快速上手 →
+actionLink: /dajian/
+features:
+- title: 简洁至上
+  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
+- title: Vue驱动
+  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
+- title: 高性能
+  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+---
+</code></pre></div><h2 id="项目结构"><a href="#项目结构" class="header-anchor">#</a> 项目结构</h2> <p>我们的项目结构已经搭好了</p> <div class="language- extra-class"><pre class="language-text"><code>project
+├─── docs
+│   ├── README.md
+│   └── .vuepress
+│       ├── public
+│       └── config.js
+└── package.json
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/peizhi/">基本配置</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2b932a6f.js" defer></script><script src="/assets/js/2.3a45bbd8.js" defer></script><script src="/assets/js/7.3920d5c1.js" defer></script>
+  </body>
+</html>
